@@ -1,0 +1,168 @@
+*{
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background_color: rgb(77, 77, 77);
+}
+
+body{
+    background-color: var(--background_color);
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.title{
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left:25%;
+    top: 6%;
+
+    color:white;
+    font-family: monospace;
+    font-size: 300%;
+    font-weight: bold;
+
+    background-color: rgba(57, 212, 196, 0);
+}
+
+.title span{
+    color: gold;
+}
+
+.word_holder{
+    width: 50%;
+    height: 15%;
+
+    position: absolute;
+    left: 25%;
+    bottom: 10%;
+
+    overflow: hidden;
+
+    background-color: rgba(240, 220, 183, 0);
+}
+
+.animated_words{
+    color: white;
+    font-size: 50px;
+
+    height: 100%;
+    width: 2000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation-duration: 10s;
+    animation-name: slide_by;
+    animation-iteration-count: infinite;
+}
+
+.animated_words span{
+    background-color: rgba(255, 255, 0, 0);
+    width: 25%;
+    text-align: center;
+}
+
+@keyframes slide_by{
+    from{
+        margin-left: 100%;
+    }
+
+    20%{
+        margin-left: 0%;
+        padding-left: 25%;
+    }
+
+    40%{
+        margin-left: -500px;
+    }
+
+    60%{
+        margin-left: -1000px;
+    }
+
+    80%{
+        margin-left: -1500px;
+        padding-left: 25%;
+    }
+
+    to{
+        margin-left: -2000px;
+        padding-left: 0;
+    }
+}
+
+#SoftDev{
+    color:rgb(15, 158, 15);
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 0px;
+}
+
+#GameDev{
+    color: rgb(255, 55, 55);
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#Art{
+    color: rgb(146, 107, 209);
+    font-weight: 700;
+    font-family: cursive;
+}
+
+#Music{
+    color:rgb(0, 153, 255);
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.image_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 25%;
+
+    width: 100%;
+    height: 50%;
+
+    overflow: hidden;
+}
+
+.selfie{
+    width: 100%;
+    min-height: 50%;
+    padding-top: 20%;
+}
+
+.vert_fade{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom,
+        var(--background_color) ,
+        rgba(0,0,0,0) 5%,
+        rgba(0,0,0,0) 95%,
+        var(--background_color));
+}
+
+.horizontal_fade{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to left,
+        var(--background_color) ,
+        rgba(0,0,0,0) 5%,
+        rgba(0,0,0,0) 95%,
+        var(--background_color));
+}
